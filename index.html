@@ -34,5 +34,36 @@
     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique reprehenderit, earum ab culpa, praesentium illo libero tenetur architecto sequi quis odio et, ratione ex cupiditate eligendi incidunt dolor. Eum, commodi Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat consequatur dolor nostrum delectus itaque ut unde, nisi dignissimos, nam non quaerat quis totam, excepturi corrupti voluptates ipsam veritatis voluptate recusandae! Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, consequuntur. Doloribus distinctio est quaerat facilis pariatur eaque, omnis illum tempore consectetur fuga. Repellat vero reiciendis soluta reprehenderit delectus molestiae. Ducimus. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora aperiam consequatur ratione quia quae blanditiis nihil consequuntur, architecto soluta quam magni rem illo explicabo, nemo illum quisquam magnam itaque. Iure?!</p>
     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique reprehenderit, earum ab culpa, praesentium illo libero tenetur architecto sequi quis odio et, ratione ex cupiditate eligendi incidunt dolor. Eum, commodi Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat consequatur dolor nostrum delectus itaque ut unde, nisi dignissimos, nam non quaerat quis totam, excepturi corrupti voluptates ipsam veritatis voluptate recusandae! Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, consequuntur. Doloribus distinctio est quaerat facilis pariatur eaque, omnis illum tempore consectetur fuga. Repellat vero reiciendis soluta reprehenderit delectus molestiae. Ducimus. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora aperiam consequatur ratione quia quae blanditiis nihil consequuntur, architecto soluta quam magni rem illo explicabo, nemo illum quisquam magnam itaque. Iure?!</p>
   </div>
+  <script>
+    let text = document.querySelector('#text');
+    let bird1 = document.querySelector('#bird1');
+    let bird2 = document.querySelector('#bird2');
+    let btn = document.querySelector('#btn');
+    let forest = document.querySelector('#forest');
+    let rocks = document.querySelector('#rocks');
+    let water = document.querySelector('#water');
+
+    function heandleEventScroll(event) {
+      let value = window.scrollY;
+
+      text.style.top = + 50 + value * -0.5 + '%';
+
+      bird1.style.top = value * -1.5 + 'px';
+      bird1.style.left = value * 2 + 'px';
+
+      bird2.style.top = value * -1.5 + 'px';
+      bird2.style.left = value * -5 + 'px';
+
+      btn.style.marginTop = value * 1.5 + 'px';
+
+      rocks.style.top = value * -0.12 + 'px';
+      
+      forest.style.top = value * 0.25 + 'px';
+
+      header.style.top = value * 0.5 + 'px';
+    }
+
+    window.addEventListener('scroll', heandleEventScroll)
+  </script>
 </body>
 </html>

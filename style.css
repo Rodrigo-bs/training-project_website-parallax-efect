@@ -8,7 +8,7 @@
 }
 
 body {
-    /* overflow-x: hidden; */
+    overflow-x: hidden;
     background: #fff;
     min-height: 100vh;
 }
@@ -59,7 +59,7 @@ body {
 section {
     position: relative;
     width: 100%;
-    min-height: 100vh;
+    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
